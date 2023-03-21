@@ -11,7 +11,8 @@ You can download our code from this repository in the SRC folder.
 You can use our code by opening the file in the SRC folder, as detailed above, in R Studio and ensuring the data is downloaded and all necessary packages/libraries are installed and loaded.
 
 ### DATA
-You can access our data from this repository in the DATA folder. 
+You can access our data from this repository in the DATA folder.\
+Our data was used to explore our hypothesis: *Our model will be able to accurately predict the stage of Alzheimer’s present in each brain scan with an accuracy of 90%.*\
 | Variable | Type | Description |
 | -------- | ---- | ----------- |
 | Non Demented | Image | Images of brain scans from patients who are in the earliest stage of Alzheimer’s progression and are not having symptoms of dementia |
