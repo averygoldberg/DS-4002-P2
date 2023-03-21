@@ -33,5 +33,6 @@ The data can be downloaded from the link below:\
 ### ACKNOWLEDGEMENTS
 We would like to acknowledge Professor Alonzi and Avril Lavigne for supporting us in our data analysis journey.
 
-[Milestone 1 - Project 2](https://docs.google.com/document/d/1mBjPhRm3jpO0wOZiAe-f3G6VocmsAj7WSa6iEhy5FYo/edit?usp=share_link)
+#### Relevant Preparatory Assignments
+[Milestone 1 - Project 2](https://docs.google.com/document/d/1mBjPhRm3jpO0wOZiAe-f3G6VocmsAj7WSa6iEhy5FYo/edit?usp=share_link)\
 [Milestone 2 - Project 2](https://docs.google.com/document/d/197s1BXEq1p9CKcmx7dvmEoAfybXHKw-69AX0dhaeL1A/edit?usp=share_link)
