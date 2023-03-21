@@ -18,6 +18,7 @@ You can access our data from this repository in the DATA folder.
 | Very Mild Demented | Image | Images of brain scans from patients who are in the 2nd stage of Alzheimer’s progression and are having very slight symptoms of dementia |
 | Mild Demented | Image | Images of brain scans from patients who are in the 3rd stage of Alzheimer’s progression and are having slight symptoms of dementia |
 | Moderate Demented | Image | Images of brain scans from patients who are in the 4th stage of Alzheimer’s progression and are having moderate symptoms of dementia |
+
 The data can be downloaded from the link below:
 
 [Kaggle Alzheimer's Dataset](https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images)
