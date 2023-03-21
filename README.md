@@ -31,8 +31,8 @@ The data can be downloaded from the link below:\
 
 
 ### REFERENCES
-[1] S. Dubey, Alzheimer's Dataset ( 4 class of Images), version. 1, Kaggle, 2020. [Dataset]. Available: https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images. [Accessed: Mar. 14, 2023].\
-[2] ApokalypsePartyTeam, "How to build your own image recognition app with R! [Part 1]," *WordPress*. Available: https://forloopsandpiepkicks.wordpress.com/2021/03/16/how-to-build-your-own-image-recognition-app-with-r-part-1/. [Accessed Mar. 21, 2023].
+[1] *S. Dubey, Alzheimer's Dataset ( 4 class of Images)*, version. 1, Kaggle, 2020. [Online]. Available: https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images. [Accessed: Mar. 14, 2023].\
+[2] ApokalypsePartyTeam, "How to build your own image recognition app with R! [Part 1]," WordPress. Available: https://forloopsandpiepkicks.wordpress.com/2021/03/16/how-to-build-your-own-image-recognition-app-with-r-part-1/. [Accessed Mar. 21, 2023].
 
 ### ACKNOWLEDGEMENTS
 We would like to acknowledge Professor Alonzi and Avril Lavigne for supporting us in our data analysis journey.
