@@ -55,6 +55,19 @@ validation_images <- flow_images_from_directory(path_train,
   class_mode = "categorical",
   classes = label_list,
   seed = 2021)
+
+
+path_test <- "Alzheimers Dataset/test/"
+
+test_data_gen <- image_data_generator(rescale = 1/255)
+
+test_images <- flow_images_from_directory(path_test,
+   test_data_gen,
+   target_size = target_size,
+   class_mode = "categorical",
+   classes = label_list,
+   shuffle = F,
+   seed = 2021)
 ```
 
 # Modeling
@@ -83,7 +96,7 @@ model_function <- function(learning_rate = 0.001,
   
   model %>% compile(
     loss = "categorical_crossentropy",
-    optimizer = optimizer_adam(lr = learning_rate),
+    optimizer = optimizer_adam(learning_rate = learning_rate),
     metrics = "accuracy"
   )
   
@@ -98,7 +111,7 @@ model <- model_function()
 batch_size <- 32
 epochs <- 6
 
-hist <- model %>% fit_generator(
+hist <- model %>% fit(
   train_images,
   steps_per_epoch = train_images$n %/% batch_size, 
   epochs = epochs, 
@@ -109,19 +122,40 @@ hist <- model %>% fit_generator(
 ```
 
 ```{r}
-path_test <- "Alzheimers Dataset/test/"
+model %>% evaluate(test_images, 
+                     steps = test_images$n %/% batch_size)
+```
 
-test_data_gen <- image_data_generator(rescale = 1/255)
+Predictions:
+```{r}
+predictions <- model %>% 
+  predict(
+    test_images,
+    steps = test_images$n %/% batch_size
+  ) %>% as.data.frame
+```
 
-test_images <- flow_images_from_directory(path_test,
-   test_data_gen,
-   target_size = target_size,
-   class_mode = "categorical",
-   classes = label_list,
-   shuffle = F,
-   seed = 2021)
 
-model %>% evaluate_generator(test_images, 
-                     steps = test_images$n)
+```{r}
+names(predictions) <- paste0("Class",0:3)
+
+predictions$predicted_class <- 
+  paste0("Class",apply(predictions,1,which.max)-1)
+predictions$true_class <- paste0("Class",test_images$classes[1:1248])
+```
+
+```{r}
+predictions %>% group_by(true_class) %>% 
+  summarise(percentage_true = round(100*sum(predicted_class == 
+    true_class)/n(),1)) %>% 
+    left_join(data.frame(class= names(test_images$class_indices), 
+    true_class=paste0("Class",0:3)),by="true_class") %>%
+  select(class, percentage_true) %>% 
+  mutate(class = fct_reorder(class,percentage_true)) %>%
+  ggplot(aes(x=class,y=percentage_true,fill=percentage_true, 
+    label=percentage_true)) +
+  geom_col() + theme_minimal() + coord_flip() +
+  geom_text(nudge_y = 3) + 
+  ggtitle("Percentage correct classifications by Alzheimers Stage")
 ```
 
