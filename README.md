@@ -27,7 +27,7 @@ The data can be downloaded from the link below:\
 ### FIGURES
 | Figure | Summary |
 | ------ | ------- |
-| Input Figure Names... | Input Figure Summaries... |
+| classifications.png | Graph displaying the accuracty of which our model predicts the different stages. |
 
 
 ### REFERENCES
